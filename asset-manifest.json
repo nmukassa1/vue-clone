@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/vue-clone/static/css/main.8048e971.css",
+    "main.js": "/vue-clone/static/js/main.e37bc449.js",
+    "static/js/592.38f207c9.chunk.js": "/vue-clone/static/js/592.38f207c9.chunk.js",
+    "static/media/the-hunger-games-hero.webp": "/vue-clone/static/media/the-hunger-games-hero.cc584fcc144f621e81bd.webp",
+    "static/media/renaissance-a-film-by-beyonce-hero.webp": "/vue-clone/static/media/renaissance-a-film-by-beyonce-hero.c5837cc2b147370dc660.webp",
+    "static/media/12a-film-classification.png": "/vue-clone/static/media/12a-film-classification.a50d26d0e17361446315.png",
+    "static/media/napoleon.webp": "/vue-clone/static/media/napoleon.71583f6a532620a97d3e.webp",
+    "static/media/the-hunger-games-poster.webp": "/vue-clone/static/media/the-hunger-games-poster.de510465d6cf1d20404c.webp",
+    "static/media/napoleon-poster.webp": "/vue-clone/static/media/napoleon-poster.f089581f98cf1915c800.webp",
+    "static/media/15-film-classification.png": "/vue-clone/static/media/15-film-classification.bec64382f1376a5d2c85.png",
+    "static/media/RENAISSANCE_poster.webp": "/vue-clone/static/media/RENAISSANCE_poster.fcb1af42361d3f52360c.webp",
+    "static/media/vue-logo.webp": "/vue-clone/static/media/vue-logo.ae9b102334b226165648.webp",
+    "index.html": "/vue-clone/index.html",
+    "main.8048e971.css.map": "/vue-clone/static/css/main.8048e971.css.map",
+    "main.e37bc449.js.map": "/vue-clone/static/js/main.e37bc449.js.map",
+    "592.38f207c9.chunk.js.map": "/vue-clone/static/js/592.38f207c9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8048e971.css",
+    "static/js/main.e37bc449.js"
+  ]
+}
