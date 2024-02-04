@@ -10,10 +10,10 @@ function App() {
 
   return (
     <div className='App'>
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route exact path="/" element={<Home />} />
           <Route path='/cinema/:location/film/:title/:id' element={<Cinema />} />
           <Route path='*' element={<PageNotFound />} />
         </Routes>
