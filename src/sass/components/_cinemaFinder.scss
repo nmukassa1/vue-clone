@@ -13,6 +13,7 @@
 
     h2{
         flex-shrink: 0;
+        margin: 0;
         @include breakpoints.breakpoint-down(small){
             margin-bottom: 0;
         }

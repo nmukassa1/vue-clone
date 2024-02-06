@@ -1,8 +1,5 @@
 @use '../util//colors';
-
-h2.section-title{
-    margin-top: 0;
-}
+@use '../util//breakpoints';
 
 .film-details-hero{
     position: relative;
@@ -12,6 +9,7 @@ h2.section-title{
         position: absolute;
         top: 0;
         left: 0;
+        right: 0;
         height: 100%;
         z-index: -1;
         &::after{
@@ -42,21 +40,18 @@ h2.section-title{
         margin: 0;
     }
 }
-.film-details__poster-img{
-    flex: 0 0 7.625rem;
-
-}
 
 .film-details__age-certificate{
-    display: flex;
-    align-items: center;
-    gap: .5rem;
+    margin-top: 1rem;
     img{
         width: 1.25rem;
     }
     p{
         font-size: .6rem;
         color: gray;
+        @include breakpoints.breakpoint-up(large){
+            width: 50%;
+        }
     }
 }
 
@@ -135,22 +130,39 @@ h2.section-title{
     color: black;
 }
 
+.card-schedule-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: .7rem;
+
+    @include breakpoints.breakpoint-up(medium){
+        grid-template-columns: repeat(3, 1fr);
+        display: grid;
+    }
+    @include breakpoints.breakpoint-up(large){
+        grid-template-columns: repeat(5, 1fr);
+        // display: grid;
+    }
+}
+
 .card-schedule{
     width: 100%;
-    height: 4.38rem;
+    height: 70px;
     border: 1px solid colors.$grey;
     display: flex;
     justify-content: space-between;
     padding: 10px;
     text-align: left;
 
+    @include breakpoints.breakpoint-up(medium){
+        height: 102px;
+        width: 190px;
+        flex-direction: column;
+    }
+
     .time{
         margin-bottom: .3rem;
     }
 }
 
-.card-schedule-container{
-    display: flex;
-    flex-direction: column;
-    gap: .7rem;
-}

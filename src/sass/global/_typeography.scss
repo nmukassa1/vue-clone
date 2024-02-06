@@ -1,4 +1,19 @@
 h1, h2 {
     font-weight: 400;
-    font-size: 1.2rem;
+}
+
+a{
+    font-size: clamp(.7rem, 3vw + 1rem, .9rem);
+}
+
+.film-details__title{
+    font-size: clamp(1.2rem, 2.25vw + 1rem , 2rem);
+}
+
+.cinema-finder .section-title{
+    font-size: 1rem;
+}
+
+.scheduel-heading{
+    font-size: 1rem;
 }
