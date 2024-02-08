@@ -3,10 +3,14 @@
 
 .hero-slide{
     overflow: hidden;
-    @include breakpoints.breakpoint-down(small){
-        width: min(100% - 1.5rem, 1040px);
-        margin-inline: auto;
-        border-radius: 10px;
+    // width: min(100% - 1.5rem, 1040px);
+    width: calc(100% - 24px);
+    margin-inline: auto;
+    border-radius: 10px;
+    @include breakpoints.breakpoint-up(large){
+        border-radius: 0;
+        margin-inline: initial;
+        width: 100%;
     }
 }
 
@@ -16,8 +20,9 @@
     /* overflow: scroll; */
     /* scroll-snap-type: x mandatory; */
     transition: all .8s ease;
-    @include breakpoints.breakpoint-down(small){
-        height: 20rem;
+    height: 320px;
+    @include breakpoints.breakpoint-up(large){
+        height: initial;
     }
 }
 
@@ -25,14 +30,14 @@
     flex-shrink: 0;
     width: 100%;
     position: relative;
+    height: 100%;
     @include breakpoints.breakpoint-down(small){
-        height: 100%;
     }
     /* scroll-snap-align: start; */
     img{
+        object-fit: cover;
+        height: 100%;
         @include breakpoints.breakpoint-down(small){
-            height: 100%;
-            object-fit: cover;
         }
     }
 }
@@ -50,28 +55,21 @@
 
 .control-panel{ 
     position: absolute;
+    width: 100%;
     left: 50%;
     bottom: 6%;
     transform: translateX(-50%);
     z-index: 999;
     display: flex;
-    align-items: center;
+    align-items: end;
     gap: 40px;
-    @include breakpoints.breakpoint-down(small){
-        left: 0;
-        transform: translateX(0);
-        padding: 0 .5rem;
-        width: 100%;
-        justify-content: space-between;
-        align-items: end;
-    }
 }
 
 .control-panel__title h1{
     font-weight: 300;
-    margin: 0 0 10px;
-    @include breakpoints.breakpoint-down(small){
-        margin-bottom: .125rem;
+    margin-bottom: .125rem;
+    @include breakpoints.breakpoint-up(large){
+        margin: 0 0 10px;
     }
 }
 
@@ -82,12 +80,12 @@
     height: 70px;
     width: 70px;
     color: white;
-    display: grid;
+    display: none;
     place-content: center;
     font-size: 2rem;
     cursor: pointer;
-    @include breakpoints.breakpoint-down(small){
-        display: none;
+    @include breakpoints.breakpoint-up(large){
+        display: grid;
     }
 }
 
@@ -103,17 +101,19 @@
     border-image-slice: 1;
     min-width: fit-content;
     text-decoration: none;
-    padding: 10px 20px;
-    font-size: 1.3rem;
-    @include breakpoints.breakpoint-down(small){
-        font-size: 0.9rem;
-        padding: 5px 10px;
+    margin-left: auto;
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    @include breakpoints.breakpoint-up(large){
+        font-size: 1.3rem;
+        padding: 10px 20px;
     }
 }
 
 .age-classification{
-    @include breakpoints.breakpoint-down(small){
-        font-size: .8rem;
+    font-size: .8rem;
+    @include breakpoints.breakpoint-up(large){
+        font-size: initial;
     }
 }
 

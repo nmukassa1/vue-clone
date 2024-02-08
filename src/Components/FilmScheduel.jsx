@@ -61,7 +61,7 @@ function FilmScheduel({filterFilmByDay}) {
             {filmScheduel.length > 0 && (
                 filmScheduel.map((item, index) => (
                     <div key={index}>
-                        <h2>
+                        <h2 className='scheduel-heading'>
                             {index === 0 ? `UPCOMING SHOWINGS FOR ${day}` : daysOfWeek[dates[index].getDay()]}
                         </h2> 
                         <ul className="card-schedule-container">

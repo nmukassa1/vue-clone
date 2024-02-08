@@ -2,16 +2,21 @@ import useData from '../Hooks/useData'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faMagnifyingGlass, faXmark} from '@fortawesome/free-solid-svg-icons'
 import {Link} from 'react-router-dom'
-import {useState, useRef} from 'react'
+import {useState, useRef, useEffect} from 'react'
 
 function CinemaLocationBox({placeholder, setPlaceholder}) {
 
     const [isDropdownOpen, setIsDropdownOpen] = useState(false)
+    useEffect(() => {
+        console.log('fix location box toggle function');
+    }, [])
+
     const dropdown = useRef()
     function toggle(){
         if(isDropdownOpen === false){
             //Make dropdown slide in when on mobile
             if(window.innerWidth < 900){
+                dropdown.current.style.display = 'block'
                 dropdown.current.style.right = '0'
             } else{
                 //Else animate for desktop
@@ -23,11 +28,11 @@ function CinemaLocationBox({placeholder, setPlaceholder}) {
                 dropdown.current.style.right = '-100vw'
             }else{
                 dropdown.current.style.display = 'none'
-                console.log('ln 27')
             }
             setIsDropdownOpen(!isDropdownOpen)
         }
     }
+    
 
     const {locationShowings} = useData();
 
@@ -60,17 +65,19 @@ function CinemaLocationBox({placeholder, setPlaceholder}) {
             </button>
 
             <div ref={dropdown} className={`dropdown-menu`}>
-                <div id="dropdown-menu__header">
-                    <h3 className="dropdown-menu__title">
-                        CHOOSE YOUR VUE</h3>
-                    <button onClick={toggle}><FontAwesomeIcon icon={faXmark} /></button>
+                <div id="dropdown-menu__header" className='container'>
+                        <h3 className="dropdown-menu__title">
+                            CHOOSE YOUR VUE</h3>
+                        <button onClick={toggle}><FontAwesomeIcon icon={faXmark} /></button>
                 </div>
 
-                <div className="dropdown-menu__search">
-                    <input type="text" placeholder='Browse Vue A-Z'/>
-                    <button>
-                        <FontAwesomeIcon icon={faMagnifyingGlass} />
-                    </button>
+                <div className="dropdown-menu-search">
+                    <div className="dropdown-menu-search__container container">
+                        <input type="text" placeholder='Browse Vue A-Z'/>
+                        <button>
+                            <FontAwesomeIcon icon={faMagnifyingGlass} />
+                        </button>
+                    </div>
                 </div>
 
                 <ul className="dropdown-menu__list">

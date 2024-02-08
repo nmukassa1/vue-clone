@@ -2,11 +2,10 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 import useData from "../Hooks/useData";
 import useScrollToTop from "../Hooks/useScrollToTop";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFilter } from '@fortawesome/free-solid-svg-icons'
 import CinemaLocation from "../Components/CinemaLocation";
 import DaysOfWeekPanel from "../Components/DaysOfWeekPanel";
 import FilmScheduel from "../Components/FilmScheduel";
+import FilterFilm from "./FilterFilm";
 
 
 function Cinema() {
@@ -95,19 +94,7 @@ function Cinema() {
                 <div>
                     <CinemaLocation placeholder={placeholder} setPlaceholder={setPlaceholder}/>
 
-                    <div className="filter">
-
-                        <div className="filter-button">
-                            <div className="filter-icon">
-                                <FontAwesomeIcon icon={faFilter} />
-                            </div>
-                            <button>Filter All Films & Events</button>
-                        </div>
-
-                        <div className="filter-dropdown">
-                            {/* Filters */}
-                        </div>
-                    </div>
+                    {/* <FilterFilm screenSize={'filter-mobile'} /> */}
 
                     <DaysOfWeekPanel setFilterFilmByDay={setFilterFilmByDay} />
                     <FilmScheduel filterFilmByDay={filterFilmByDay} />

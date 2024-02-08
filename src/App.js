@@ -10,7 +10,7 @@ function App() {
 
   return (
     <div className='App'>
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <BrowserRouter basename={process.env.PUBLIC_URL} forceRefresh={true}>
         <Navbar />
         <Routes>
           <Route exact path="/" element={<Home />} />
