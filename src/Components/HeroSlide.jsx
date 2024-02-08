@@ -42,16 +42,18 @@ function HeroSlide() {
                         <div className="slide-item slide-item__movie" key={item.title}>
                             <img src={item.img} alt="" />
 
-                            <div className="control-panel">
-                                <button className="control-panel__play-trailer">
-                                    <FontAwesomeIcon icon={faPlay} /> 
-                                </button>
+                            <div className="control-panel container">
+                                <div>
+                                    <button className="control-panel__play-trailer">
+                                        <FontAwesomeIcon icon={faPlay} /> 
+                                    </button>
 
-                                <div className="control-panel__title">
-                                    <h1>{item.title}</h1>
-                                    <div className="age-classification">
-                                        <img src={item.age} alt="" />
-                                        <span>Now showing at your local Vue</span>
+                                    <div className="control-panel__title">
+                                        <h1>{item.title}</h1>
+                                        <div className="age-classification">
+                                            <img src={item.age} alt="" />
+                                            <span>Now showing at your local Vue</span>
+                                        </div>
                                     </div>
                                 </div>
 

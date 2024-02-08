@@ -41,25 +41,21 @@ function DaysOfWeekPanel({filterFilmByDay, setFilterFilmByDay}) {
     
 
     return ( 
-        <div>
-           <ul className="days-of-week">
-                {dates.map((day, index) => (
-                    <li key={index}>
-                        <button  
-                            id={index}
-                            className={`day ${index === 0 ? ('active') : ''}`}
-                            onClick={(e) => handleHighlight(e)}
-                        >
-                            {index === 0 && ('Today')}
-                            {index === 1 && ('Tomorrow')} 
-                            {index > 1 && daysOfWeek[dates[index].getDay()].split('', 3)} 
-                        </button>
-                    </li>
-                ))}
-            </ul> 
-
-            {/* <FilterFilm screenSize={'filter-desktop'} /> */}
-        </div>
+        <ul className="days-of-week">
+            {dates.map((day, index) => (
+                <li key={index}>
+                    <button  
+                        id={index}
+                        className={`day ${index === 0 ? ('active') : ''}`}
+                        onClick={(e) => handleHighlight(e)}
+                    >
+                        {index === 0 && ('Today')}
+                        {index === 1 && ('Tomorrow')} 
+                        {index > 1 && daysOfWeek[dates[index].getDay()].split('', 3)} 
+                    </button>
+                </li>
+            ))}
+        </ul> 
     );
 }
 
